@@ -28,14 +28,15 @@
 % \author{The \LaTeX{} Team}
 % \date{\filedate}
 %
-% \MaintainedByLaTeXTeam{tools}
+% \MaintainedByLaTeXTeam{latex}
+%
 % \maketitle
 %
 %
 % \section{Introduction}
 %
 % Software has bugs and \LaTeX{} unfortunately is no exception. If
-% somebody encounters a bug then it help if that bug gets reported to
+% somebody encounters a bug then it helps if that bug gets reported to
 % the right people so that the bug can be resolved (or a workaround
 % documented or whatever is most appropriate). The problem is to know
 % to whom to report the a bug.
@@ -43,22 +44,24 @@
 % The \LaTeX{} Project Team maintains a bug database for its own code
 % base (which consists of the \LaTeX{} kernel and some packages that
 % happened to be written by people in the \LaTeX{} Project
-% Team). However, the LaTeX universe consists of several thousand
+% Team). However, the \LaTeX{} universe consists of several thousand
 % contributed packages maintained by individuals all over the
 % world. And if a bug happens in one of those package it doesn't help
 % anybody if it is dumped at the \LaTeX{} Project's doorstep.
 %
-% For one, we can't actually change other people's code even if we
+% For one, we can't actually change other people's code even if we are able to
 % identify the issue. Furthermore we are only a few people and simply
 % do not have the bandwidth to analyse bugs in other people's work.
 %
 % We have therefore written this little package called
 % \texttt{latexbug} that should help in identifying the rightful
 % addressee for a bug report. We ask that it will be loaded in any
-% test file that is intended to be sent to the \LaTeX{} bug database.
+% test file that is intended to be sent to the \LaTeX{} bug database
+% as part of a bug report.
 %
 % The package will determine if the test file is in a suitable state
-% but be sent to us or if it should be modified or send to somebody
+% to be sent to us or if it should be modified first or if it should be
+% sent to somebody
 % else because the bug is (likely) to be in code not maintained by the
 % \LaTeX{} Project Team.
 %
@@ -71,13 +74,14 @@
 % \section{The user interface}
 %
 % The user interface is simple: the package has no option and doesn't
-% define any new commands to be use. All that is required is that the
+% define any new commands to be used. All that is required is that the
 % package is loaded as the very first step in the test file that shows
-% the bug --- before the \verb=\documentclass=. For that reason it
+% the bug --- in other words before the \verb=\documentclass=.
+% For that reason it
 % must be loaded using \verb=\RequirePackage= instead of the usual
 % \verb=\usepackage= that is used in the preamble of a document.
 %
-% In other words a bug report test files should like like this:
+% Thus, a bug report test files should look like this:
 % \begin{verbatim}
 % \RequirePackage{latexbug}       % <- required first line
 %                                 %    followed by:
@@ -89,7 +93,7 @@
 %
 % If the test file runs through (showing the bug) without any
 % complains for \texttt{latexbug} then the test file is ready to be
-% send to the \LaTeX{} bug database at
+% sent to the \LaTeX{} bug database at
 % \begin{quote}
 %   \texttt{https://www.latex-project.org/bugs/}
 % \end{quote}
@@ -134,8 +138,8 @@
 % need to find it out for yourself by looking at the package
 % documentation.
 %
-% There may be cases where third-party code is essential exhibit
-% a bug in core LaTeX code maintained by the the \LaTeX{} Team. The
+% There may be cases where third-party code is essential to exhibit
+% a bug in core \LaTeX{} code maintained by the the \LaTeX{} Team. The
 % error text therefore finishes off with the following sentence:
 % \begin{verbatim}
 % (latexbug)                If you think the bug is in core LaTeX
@@ -174,7 +178,7 @@
 % top-level file/package will be reported by \texttt{latexbug}.} together
 % with your name and the bug report address that you want to make
 % publicly available (somewhat obfuscated using \texttt{[at]} and
-% \texttt{[dot]}.
+% \texttt{[dot]}).
 %
 %
 % \StopEventually{\PrintIndex\PrintChanges}
@@ -207,7 +211,7 @@
 %    \begin{macrocode}
 %<*package>
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{latexbug}[2016/11/22 v0.9b Bug-classification]
+\ProvidesPackage{latexbug}[2016/11/22 v0.9c Bug-classification]
 %    \end{macrocode}
 %
 % \begin{macro}{\latexbug@empty}
@@ -226,10 +230,10 @@
 % \end{macro}
 % \end{macro}
 %
-% \begin{macro}{\Email}
+% \begin{macro}{\Contact}
 %   A very simple piece of markup, really.
 %    \begin{macrocode}
-\def\Email{\MessageBreak \@spaces}
+\def\Contact{\MessageBreak \@spaces}
 %    \end{macrocode}
 % \end{macro}
 %
@@ -240,7 +244,7 @@
 %    \end{macrocode}
 %
 % \begin{macro}{\latexbug@loop}
-%   A simple loop set up which reads a know format for the file-to-maintainer
+%   A simple loop set up which reads a known format for the file-to-maintainer
 %   mapping. The trailing space is important (stripping it is not really worth
 %   it for this very limited use case).
 %    \begin{macrocode}
@@ -691,18 +695,18 @@ lipsum.sty   = ignore ,
 %---------------------------------  EXTERNALLY SUPPORTED
 %
 geometry.sty = Hideo Umeki
-               \Email <latexgeometry [at] gmail [dot] com> ,
+               \Contact <latexgeometry [at] gmail [dot] com> ,
 pd1enc.def   = ignore ,
 hyperref.cfg = ignore ,
 hpdftex.def  = ignore ,
 hyperref.sty = Heiko Oberdiek ,
 siunitx.sty  = Joseph Wright
-               \Email https://github.com/josephwright/siunitx ,
+               \Contact https://github.com/josephwright/siunitx ,
 %--------------------------------- babel external
 german.ldf   = Juergen Spitzmueller
-               \Email <juergen [at] spitzmueller [dot] org> ,
+               \Contact <juergen [at] spitzmueller [dot] org> ,
 ngerman.ldf  = Juergen Spitzmueller
-               \Email <juergen [at] spitzmueller [dot] org> ,
+               \Contact <juergen [at] spitzmueller [dot] org> ,
 %--------------------------------- LAST LINE
 {\latexbug@empty} = {} ,
 %    \end{macrocode}
