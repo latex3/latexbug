@@ -226,6 +226,13 @@
 % \end{macro}
 % \end{macro}
 %
+% \begin{macro}{\Email}
+%   A very simple piece of markup, really.
+%    \begin{macrocode}
+\def\Email{\MessageBreak \@spaces}
+%    \end{macrocode}
+% \end{macro}
+%
 % \begin{macro}{\latexbug@loop}
 %   A simple loop set up which reads a know format for the file-to-maintainer
 %   mapping. The trailing space is important (stripping it is not really worth
@@ -234,13 +241,6 @@
 \long\def\latexbug@loop #1 = #2 , {% spaces matter
   \@namedef{latexbug@@#1}{#2}%
   \ifx\latexbug@empty#1\else\expandafter\latexbug@loop\fi}
-%    \end{macrocode}
-% \end{macro}
-%
-% \begin{macro}{\Email}
-%   A very simple piece of markup, really.
-%    \begin{macrocode}
-\def\Email{\MessageBreak \@spaces}
 %    \end{macrocode}
 % \end{macro}
 %
