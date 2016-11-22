@@ -781,6 +781,13 @@ this explicitly in your bug report}{Please correct your test file prior
 %
 % \begin{macro}{\@addtofilelist}
 % \begin{macro}{\latexbug@iftoplevel}
+%   First, a test to see if we are at the top level: there's no need to
+%   test dependencies of packages. Assuming we are doing a check, the aim
+%   is to see if the current name is known, and if it is whether it fits into
+%   one of our special cases. If it's one of the \LaTeX3 GitHub packages it
+%   gets recorded in a dedicated space. Third-party package can also have
+%   information about where to report issues: this is all stored for reporting
+%   later.
 %    \begin{macrocode}
 \def\@addtofilelist#1{%
 % \show\@currnamestack
