@@ -708,13 +708,6 @@ ngerman.ldf  = Juergen Spitzmueller
 %    \end{macrocode}
 % \end{macro}
 %
-%    \begin{macrocode}
-\def\latexbug@iftoplevel #1#2\@nil{%
-  \def\next{#1}%
-  \ifx\next\@empty
-}  
-%    \end{macrocode}
-%
 % \begin{macro}{\latexbug@zzzz}
 % \begin{macro}{\latexbug@expl}
 %   Storage for third-party files and those from the \LaTeX3 set on GitHub.
@@ -787,6 +780,7 @@ this explicitly in your bug report}{Please correct your test file prior
 % \end{macro}
 %
 % \begin{macro}{\@addtofilelist}
+% \begin{macro}{\latexbug@iftoplevel}
 %    \begin{macrocode}
 \def\@addtofilelist#1{%
 % \show\@currnamestack
@@ -821,10 +815,16 @@ this explicitly in your bug report}{Please correct your test file prior
     \endgroup
   \fi
   \latexbug@addtofilelist{#1}}
+\def\latexbug@iftoplevel #1#2\@nil{%
+  \def\next{#1}%
+  \ifx\next\@empty
+}
 \endinput
 %</package>
 %    \end{macrocode}
 % \end{macro}
+% \end{macro}
+%
 % \Finale
 %
 
