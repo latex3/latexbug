@@ -213,6 +213,7 @@
 %    \begin{macrocode}
 \def\latexbug@empty{}
 \def\latexbug@us{us}
+\def\latexbug@usstar{us*}
 \def\latexbug@ignore{ignore}
 %    \end{macrocode}
 %
@@ -646,9 +647,9 @@ upsy.fd = us ,
 upzd.fd = us ,
 utopia.sty = us ,
 %--------------------------------- expl3
-expl3.sty  = LaTeX Team \Email https://github.com/latex3/latex3/issues ,
-xparse.sty = LaTeX Team \Email https://github.com/latex3/latex3/issues ,
-expl3-code.tex = us , 
+expl3.sty  = us* ,
+xparse.sty = us* ,
+expl3-code.tex = ignore ,
 %---------------------------------  USEFUL FOR BUG REPORTS
 etoolbox.sty = ignore ,
 lipsum.sty   = ignore ,
@@ -686,10 +687,32 @@ ngerman.ldf  = Juergen Spitzmueller
 %
 %    \begin{macrocode}
 \def\latexbug@zzzz{}
+\def\latexbug@expl{}
 \let\latexbug@process@table\process@table
 \def\process@table{\global\let\@addtofilelist\latexbug@addtofilelist
   \latexbug@process@table
   \ifx\latexbug@zzzz\latexbug@empty
+    \ifx\latexbug@expl\latexbug@empty
+    \else
+      \PackageError{latexbug}%
+        {LaTeX3 file(s)\MessageBreak
+\MessageBreak
+This test files uses the LaTeX3 file(s)\MessageBreak
+\MessageBreak
+        ==============\MessageBreak
+        \latexbug@expl
+        ==============\MessageBreak
+        \MessageBreak
+You should report bugs in these packages\MessageBreak
+at the LaTeX3 GitHub site,\MessageBreak
+https://github.com/latex3/latex3/issues\MessageBreak
+(Or remove them from your example,\MessageBreak
+if they are not necessary to\MessageBreak
+exhibit the problem).\MessageBreak
+}{Please correct your test file prior
+                     to submitting the bug report.\MessageBreak
+                     Otherwise it is likely to be rejected!}%
+    \fi
   \else
       \PackageError{latexbug}%
                    {Third-party file(s)\MessageBreak
@@ -730,12 +753,22 @@ this explicitly in your bug report}{Please correct your test file prior
       \xdef\latexbug@y{\csname latexbug@@\latexbug@x\endcsname}%
     \fi
     \ifx\latexbug@y\latexbug@us\else
-      \ifx\latexbug@y\latexbug@ignore\else
-         {\let\MessageBreak\relax
-           \xdef\latexbug@zzzz{\latexbug@zzzz\latexbug@x
-             \ifx\latexbug@y\latexbug@empty\else
-               \space\space -> \space \latexbug@y\fi
-             \MessageBreak}}%
+      \ifx\latexbug@y\latexbug@usstar
+        \begingroup
+          \let\MessageBreak\relax
+          \xdef\latexbug@expl{%
+            \latexbug@expl\latexbug@x
+            \MessageBreak
+          }%
+        \endgroup
+      \else
+        \ifx\latexbug@y\latexbug@ignore\else
+           {\let\MessageBreak\relax
+             \xdef\latexbug@zzzz{\latexbug@zzzz\latexbug@x
+               \ifx\latexbug@y\latexbug@empty\else
+                 \space\space -> \space \latexbug@y\fi
+               \MessageBreak}}%
+        \fi
       \fi
     \fi
     \endgroup
