@@ -1,2 +1,2 @@
 # latexbug
-latexbug package required to send bugreport to the LaTeX bug database
+latexbug package required to sent bug reports to the LaTeX bug database
