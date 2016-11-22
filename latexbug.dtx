@@ -210,32 +210,52 @@
 \ProvidesPackage{latexbug}[2016/11/22 v0.9b Bug-classification]
 %    \end{macrocode}
 %
+% \begin{macro}{\latexbug@empty}
+% \begin{macro}{\latexbug@us}
+% \begin{macro}{\latexbug@ustar}
+% \begin{macro}{\latexbug@ignore}
+%   Fixed text used in checking what actions to take with different files.
 %    \begin{macrocode}
 \def\latexbug@empty{}
 \def\latexbug@us{us}
 \def\latexbug@usstar{us*}
 \def\latexbug@ignore{ignore}
 %    \end{macrocode}
+% \end{macro}
+% \end{macro}
+% \end{macro}
+% \end{macro}
 %
+% \begin{macro}{\latexbug@loop}
+%   A simple loop set up which reads a know format for the file-to-maintainer
+%   mapping. The trailing space is important (stripping it is not really worth
+%   it for this very limited use case).
 %    \begin{macrocode}
 \long\def\latexbug@loop #1 = #2 , {% spaces matter
-  \expandafter\def\csname latexbug@@#1\endcsname{#2}%
+  \@namedef{latexbug@@#1}{#2}%
   \ifx\latexbug@empty#1\else\expandafter\latexbug@loop\fi}
 %    \end{macrocode}
+% \end{macro}
 %
+% \begin{macro}{\Email}
+%   A very simple piece of markup, really.
 %    \begin{macrocode}
 \def\Email{\MessageBreak \@spaces}
 %    \end{macrocode}
+% \end{macro}
 %
 % A simple database of files. The value \texttt{us} means we accept
-% bugs for it. A value of \texttt{ignore} means that its not our code,
-% but we understand that it may show up in legitimate test files and
-% should therefore not trigger an error.
+% bugs for it. We also take bug reports for \texttt{us*} entries, but
+% they need to go to GitHub so are handled separately (and only show up
+% if there doesn't seem to be anything else to pick up). A value of
+% \texttt{ignore} means that its not our code, but we understand that it may
+% show up in legitimate test files and should therefore not trigger an error.
 %
 % Any file not in there will trigger an error if loaded and any file
 % in there with some other value than \texttt{us} or \texttt{ignore}
 % will also trigger an error displaying the value (which hopefully is
-% the maintainers name).
+% the maintainers name). (Handling for \texttt{us*} means these files may
+% not show up, depending on the nature of the use case.)
 %
 %    \begin{macrocode}
 \latexbug@loop
