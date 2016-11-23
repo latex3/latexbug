@@ -20,6 +20,8 @@ build/*
 # *.ps
 # *.eps
 # *.pdf
+# ----don't want this one
+latexbug.pdf
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
