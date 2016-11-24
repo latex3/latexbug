@@ -1,0 +1,16 @@
+\RequirePackage{latexbug}
+
+\input{regression-test}
+
+\documentclass{article}
+
+\usepackage[english, ngerman, spanish]{babel}
+\usepackage{array}
+
+\START
+
+\begin{document}
+
+  \typeout{test}
+
+\end{document}

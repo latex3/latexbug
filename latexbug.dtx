@@ -1,6 +1,7 @@
 % \iffalse meta-comment
 %
 % Package latexbug for use with LaTeX2e
+%
 % Copyright 2016
 %
 % The LaTeX3 Project and any individual authors listed elsewhere
@@ -25,7 +26,7 @@
 % \title{The \texttt{latexbug} package\thanks{This file
 %        has version number \fileversion, last
 %        revised \filedate.}}
-% \author{The \LaTeX{} Team}
+% \author{The \LaTeX{} Team}   % Frank Mittelbach
 % \date{\filedate}
 %
 % \MaintainedByLaTeXTeam{latex}
@@ -195,7 +196,7 @@
 \documentclass{ltxdoc}
 \GetFileInfo{latexbug.sty}
 %\usepackage{geometry,footmisc,hyperref}  % uncomment for latexbug error
-\usepackage{xparse}                       % uncomment for latexbug error
+%\usepackage{xparse}                      % uncomment for latexbug error
 \EnableCrossrefs
 %\DisableCrossrefs    % Say \DisableCrossrefs if index is ready
 
@@ -211,7 +212,7 @@
 %    \begin{macrocode}
 %<*package>
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{latexbug}[2016/11/22 v0.9c Bug-classification]
+\ProvidesPackage{latexbug}[2016/11/24 v0.9d Bug-classification]
 %    \end{macrocode}
 %
 % \begin{macro}{\latexbug@empty}
@@ -271,6 +272,7 @@
 \latexbug@loop
 %--------------------------------- 
 latexbug.sty = us ,
+regression-test = us ,
 %--------------------------------- base
 alltt.sty = us ,
 ansinew.def = us ,
@@ -464,7 +466,7 @@ verbtest.tex = us ,
 x.tex = us ,
 xr.sty = us ,
 xspace.sty = us ,
-%--------------------------------- babel (what is supported by us?)
+%--------------------------------- babel (part supported by us)
 UKenglish.sty = us ,
 USenglish.sty = us ,
 afrikaans.sty = us ,
@@ -698,13 +700,21 @@ beamer.cls   = Joseph Wright
                \Contact https://github.com/josephwright/beamer/issues ,
 geometry.sty = Hideo Umeki
                \Contact <latexgeometry [at] gmail [dot] com> ,
-pd1enc.def   = ignore ,
-hyperref.cfg = ignore ,
 hpdftex.def  = ignore ,
-hyperref.sty = Heiko Oberdiek ,
+hluatex.def  = ignore ,               
+hxetex.def   = ignore ,               
+hyperref.cfg = ignore ,
+hyperref.sty = Heiko Oberdiek
+               \Contact https://github.com/ho-tex/hyperref/issues ,
+pd1enc.def   = ignore ,
+puenc.def    = ignore ,
+siunitx.sty  = Joseph Wright
+               \Contact https://github.com/josephwright/siunitx ,
 %--------------------------------- babel external
 german.ldf   = Juergen Spitzmueller
                \Contact <juergen [at] spitzmueller [dot] org> ,
+italian.ldf  = Claudio Beccari
+               \Contact <claudio dot beccari [at] gmail [dot] com> ,
 ngerman.ldf  = Juergen Spitzmueller
                \Contact <juergen [at] spitzmueller [dot] org> ,
 %--------------------------------- LAST LINE
