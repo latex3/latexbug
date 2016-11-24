@@ -26,7 +26,7 @@
 % \title{The \texttt{latexbug} package\thanks{This file
 %        has version number \fileversion, last
 %        revised \filedate.}}
-% \author{The \LaTeX{} Team}   % Frank Mittelbach
+% \author{The \LaTeX{} Team}   ^^A Frank Mittelbach
 % \date{\filedate}
 %
 % \MaintainedByLaTeXTeam{latex}
@@ -116,7 +116,8 @@
 % (latexbug)                geometry.sty  ->  Hideo Umeki 
 % (latexbug)                    <latexgeometry [at] gmail [dot] com>
 % (latexbug)                footmisc.sty
-% (latexbug)                hyperref.sty  ->  Heiko Oberdiek
+% (latexbug)                hyperref.sty  ->  Heiko Oberdiek 
+% (latexbug)                    https://github.com/ho-tex/hyperref/issues
 % (latexbug)                ==============
 % (latexbug)                
 % \end{verbatim}
@@ -135,7 +136,8 @@
 % To make life somewhat easier \texttt{latexbug} will tell you the
 % name of the maintainer (if we know it and have added it in) and if
 % possible also the canonical bug address for the package (like in the
-% case of \texttt{geometry}). If we don't have that information, you
+% case of \texttt{geometry} and  \texttt{hyperref}).
+% If we don't have that information, you
 % need to find it out for yourself by looking at the package
 % documentation.
 %
@@ -163,23 +165,41 @@
 % \vspace*{3ex}
 %
 %
-% \subsection{A word to maintainers of third-party packages}
+% \subsection{A note on the database content in the package}
 %
-% If you want us to include a bug report address for your package
-% please sent us the necessary information, for example by generating
-% a pull request or by opening an issue.
-% The source of the package is available at
+
+% When a document is run through \LaTeX{} it will load a number of
+% files and bug reports that are to be sent to the \LaTeX{} Team should only
+% load files that we maintain and not third-party packages.
+
+% The database, if you want to call that, inside \texttt{latexbug} is
+% simply comma separated a key value list consisting of file names
+% \texttt{=} maintainer info. Most of the time the maintainer info is
+% \texttt{us} or \texttt{us*} (meaning we maintain it, so the file is
+% fine) or \texttt{ignore} (meaning we do not maintain it, but it is a
+% file that is likely to appear for one or the other reason and we
+% should accept such a bug report nontheless).
+%
+% Any file loaded in the bug report not listed will show up in the
+% error listing flagged as ``third-party'' code that should be removed
+% as explained above.
+%
+
+% For a small number of popular third-party packages we have collected
+% the name of the external maintainer and if available to us some
+% extra info so that it is easier to send to the rightful addressee if
+% you encounter a bug in such a third-party package. But to keep this
+% manageable this is only done for a very small number of the 5000+
+% packages out there (though we might add one or the other over time).
+
+% It is however not impossible that we missed one or the other file
+% that should have been listed as ``maintained by us'' but isn't and
+% thus incorrectly generates an error. If you run into that problem or
+% notice an ommision of that sort, please send us a bug report or open
+% an issue at the github source of the package which is located at:
 % \begin{quote}
 %   \texttt{https://github.com/latex3/latexbug/}
 % \end{quote}
-%
-% What we need is essentially a list of file/package names that you
-% maintain\footnote{Top-level files are usually enough, e.g., if a
-% file is always loaded as part of some other file, then normally only the
-% top-level file/package will be reported by \texttt{latexbug}.} together
-% with your name and the bug report address that you want to make
-% publicly available (somewhat obfuscated using \texttt{[at]} and
-% \texttt{[dot]}).
 %
 %
 % \StopEventually{\PrintIndex\PrintChanges}
@@ -212,7 +232,7 @@
 %    \begin{macrocode}
 %<*package>
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{latexbug}[2016/11/24 v0.9d Bug-classification]
+\ProvidesPackage{latexbug}[2016/11/25 v0.9e Bug-classification]
 %    \end{macrocode}
 %
 % \begin{macro}{\latexbug@empty}
