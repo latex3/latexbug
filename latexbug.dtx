@@ -167,11 +167,10 @@
 %
 % \subsection{A note on the database content in the package}
 %
-
 % When a document is run through \LaTeX{} it will load a number of
 % files and bug reports that are to be sent to the \LaTeX{} Team should only
 % load files that we maintain and not third-party packages.
-
+%
 % The database, if you want to call that, inside \texttt{latexbug} is
 % simply comma separated a key value list consisting of file names
 % \texttt{=} maintainer info. Most of the time the maintainer info is
@@ -184,14 +183,13 @@
 % error listing flagged as ``third-party'' code that should be removed
 % as explained above.
 %
-
 % For a small number of popular third-party packages we have collected
 % the name of the external maintainer and if available to us some
 % extra info so that it is easier to send to the rightful addressee if
 % you encounter a bug in such a third-party package. But to keep this
 % manageable this is only done for a very small number of the 5000+
 % packages out there (though we might add one or the other over time).
-
+%
 % It is however not impossible that we missed one or the other file
 % that should have been listed as ``maintained by us'' but isn't and
 % thus incorrectly generates an error. If you run into that problem or
@@ -219,7 +217,6 @@
 %\usepackage{xparse}                      % uncomment for latexbug error
 \EnableCrossrefs
 %\DisableCrossrefs    % Say \DisableCrossrefs if index is ready
-
 %\OnlyDescription     % Comment out for implementation details
 \begin{document}
    \DocInput{latexbug.dtx}
@@ -972,4 +969,3 @@ this explicitly in your bug report}{Please correct your test file prior
 %
 % \Finale
 %
-
