@@ -2,7 +2,7 @@
 %
 % Package latexbug for use with LaTeX2e
 %
-% Copyright 2016,2017
+% Copyright 2016-2017
 %
 % The LaTeX3 Project and any individual authors listed elsewhere
 % in this file. 
@@ -94,7 +94,8 @@
 %
 % If the test file runs through (showing the bug) without any
 % complains for \texttt{latexbug} then the test file is ready to be
-% sent to the \LaTeX{} bug database at
+% sent to the \LaTeX{} bug database. The procedure for uploading and
+% the location is documented at
 % \begin{quote}
 %   \texttt{https://www.latex-project.org/bugs/}
 % \end{quote}
@@ -172,7 +173,7 @@
 % load files that we maintain and not third-party packages.
 %
 % The database, if you want to call that, inside \texttt{latexbug} is
-% simply comma separated a key value list consisting of file names
+% simply a comma separated key value list consisting of file names
 % \texttt{=} maintainer info. Most of the time the maintainer info is
 % \texttt{us} or \texttt{us*} (meaning we maintain it, so the file is
 % fine) or \texttt{ignore} (meaning we do not maintain it, but it is a
@@ -273,8 +274,9 @@
 % \end{macro}
 %
 % A simple database of files. The value \texttt{us} means we accept
-% bugs for it. We also take bug reports for \texttt{us*} entries, but
-% they need to go to GitHub so are handled separately (and only show up
+% bugs for it. We also take bug reports for \texttt{us*} (expl3) entries, but
+% they need to go to a different GitHub repository, so are handled separately
+% (and only show up
 % if there doesn't seem to be anything else to pick up). A value of
 % \texttt{ignore} means that its not our code, but we understand that it may
 % show up in legitimate test files and should therefore not trigger an error.
