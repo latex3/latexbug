@@ -52,7 +52,7 @@
 %
 % For one, we can't actually change other people's code even if we are able to
 % identify the issue. Furthermore we are only a few people and simply
-% do not have the bandwidth to analyse bugs in other people's work.
+% do not have the bandwidth to analyze bugs in other people's work.
 %
 % We have therefore written this little package called
 % \texttt{latexbug} that should help in identifying the rightful
@@ -178,7 +178,7 @@
 % \texttt{us} or \texttt{us*} (meaning we maintain it, so the file is
 % fine) or \texttt{ignore} (meaning we do not maintain it, but it is a
 % file that is likely to appear for one or the other reason and we
-% should accept such a bug report nontheless).
+% should accept such a bug report nonetheless).
 %
 % Any file loaded in the bug report not listed will show up in the
 % error listing flagged as ``third-party'' code that should be removed
@@ -230,7 +230,7 @@
 %    \begin{macrocode}
 %<*package>
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{latexbug}[2017/10/12 v1.0d Bug-classification]
+\ProvidesPackage{latexbug}[2017/12/15 v1.0d Bug-classification]
 %    \end{macrocode}
 %
 % \begin{macro}{\latexbug@empty}
@@ -839,7 +839,7 @@ vietnamese.ldf  = Werner Lemberg
 %    \end{macrocode}
 %
 % \begin{macro}{\latexbug@addtofilelist}
-%   Save the kernel version of \cs{\@addtofilelist}.
+%   Save the kernel version of \cs{@addtofilelist}.
 %    \begin{macrocode}
 \let\latexbug@addtofilelist\@addtofilelist
 %    \end{macrocode}
@@ -858,7 +858,7 @@ vietnamese.ldf  = Werner Lemberg
 % \begin{macro}{\latexbug@process@table}
 % \begin{macro}{\process@table}
 %   A hook into a convenient place in the document set up: the
-%   initialisation of NFSS during the \cs{document} macro. If either
+%   initialization of NFSS during the \cs{document} macro. If either
 %   \cs{latexbug@zzzz} or \cs{latexbug@expl} have any content then there is
 %   a message to issue, it's just a question of deciding which one.
 %    \begin{macrocode}
