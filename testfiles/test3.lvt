@@ -1,0 +1,15 @@
+\RequirePackage{latexbug}
+
+\input{regression-test}
+
+\documentclass{amsart}
+
+\usepackage{euscript}
+
+\START
+
+\begin{document}
+
+  \typeout{test}
+
+\END

@@ -2,7 +2,7 @@
 %
 % Package latexbug for use with LaTeX2e
 %
-% Copyright 2016-2017
+% Copyright 2016-2018
 %
 % The LaTeX3 Project and any individual authors listed elsewhere
 % in this file. 
@@ -150,7 +150,8 @@
 % (latexbug)                (as maintained by the LaTeX Team) but
 % (latexbug)                these files are needed to demonstrate
 % (latexbug)                the problem, please continue and mention
-% (latexbug)                this explicitly in your bug report.
+% (latexbug)                this explicitly in your bug report
+% (latexbug)                (with an explanation why you think so).
 % \end{verbatim}
 % Please explain your reasoning why you think this is the case in
 % detail as part of the bug report.
@@ -230,7 +231,7 @@
 %    \begin{macrocode}
 %<*package>
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{latexbug}[2017/12/15 v1.0d Bug-classification]
+\ProvidesPackage{latexbug}[2018/12/31 v1.0e Bug-classification]
 %    \end{macrocode}
 %
 % \begin{macro}{\latexbug@empty}
@@ -598,29 +599,29 @@ amsopn.sty = us ,
 amstex.sty = us ,
 amstext.sty = us ,
 amsxtra.sty = us ,
-%--------------------------------- amscls (us?)
-amsart.cls = us ,
-amsbook.cls = us ,
-amsbooka.sty = us ,
-amsdtx.cls = us ,
-amsldoc.cls = us ,
-amsmidx.sty = us ,
-amsproc.cls = us ,
-amsthm.sty = us ,
-upref.sty = us ,
-%--------------------------------- amsfonts (us?)
-amsfonts.sty = us ,
-amssymb.sty = us ,
-cmmib57.sty = us ,
-eucal.sty = us ,
-eufrak.sty = us ,
-euscript.sty = us ,
-ueuex.fd = us ,
-ueuf.fd = us ,
-ueur.fd = us ,
-ueus.fd = us ,
-umsa.fd = us ,
-umsb.fd = us ,
+%--------------------------------- amscls (AMS)
+amsart.cls = American Mathematical Society \Contact tech-support [at] ams [dot] org ,
+amsbook.cls = American Mathematical Society \Contact tech-support [at] ams [dot] org ,
+amsbooka.sty = American Mathematical Society \Contact tech-support [at] ams [dot] org ,
+amsdtx.cls = American Mathematical Society \Contact tech-support [at] ams [dot] org ,
+amsldoc.cls = American Mathematical Society \Contact tech-support [at] ams [dot] org ,
+amsmidx.sty = American Mathematical Society \Contact tech-support [at] ams [dot] org ,
+amsproc.cls = American Mathematical Society \Contact tech-support [at] ams [dot] org ,
+amsthm.sty = American Mathematical Society \Contact tech-support [at] ams [dot] org ,
+upref.sty = American Mathematical Society \Contact tech-support [at] ams [dot] org ,
+%--------------------------------- amsfonts (AMS)
+amsfonts.sty = American Mathematical Society \Contact tech-support [at] ams [dot] org ,
+amssymb.sty = American Mathematical Society \Contact tech-support [at] ams [dot] org ,
+cmmib57.sty = American Mathematical Society \Contact tech-support [at] ams [dot] org ,
+eucal.sty = American Mathematical Society \Contact tech-support [at] ams [dot] org ,
+eufrak.sty = American Mathematical Society \Contact tech-support [at] ams [dot] org ,
+euscript.sty = American Mathematical Society \Contact tech-support [at] ams [dot] org ,
+ueuex.fd = ignore ,
+ueuf.fd = ignore ,
+ueur.fd = ignore ,
+ueus.fd = ignore ,
+umsa.fd = ignore ,
+umsb.fd = ignore ,
 %--------------------------------- psnfss
 8rbch.fd = us ,
 8rpag.fd = us ,
@@ -907,7 +908,9 @@ If you think the bug is in core LaTeX\MessageBreak
 (as maintained by the LaTeX Team) but\MessageBreak
 these files are needed to demonstrate\MessageBreak
 the problem, please continue and mention\MessageBreak
-this explicitly in your bug report}{Please correct your test file prior
+this explicitly in your bug report\MessageBreak
+(with an explanation why you think so)}{Please 
+                     correct your test file prior
                      to submitting the bug report.\MessageBreak
                      Otherwise it is likely to be rejected!}%
   \fi

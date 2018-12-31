@@ -35,7 +35,8 @@ LaTeX Font Info:    ... okay on input line ....
 (latexbug)                (as maintained by the LaTeX Team) but
 (latexbug)                these files are needed to demonstrate
 (latexbug)                the problem, please continue and mention
-(latexbug)                this explicitly in your bug report.
+(latexbug)                this explicitly in your bug report
+(latexbug)                (with an explanation why you think so).
 See the latexbug package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
