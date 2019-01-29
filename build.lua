@@ -21,8 +21,6 @@ uploadconfig = {
  summary = "Bug-classification for LaTeX related bugs",
  ctanPath = "/macros/latex/required/latexbug",
  repository = "https://github.com/latex3/latexbug",
- uploader = "Frank Mittelbach",
- email = "latex-team@latex-project.org",
  update = true ,
  note = [[Uploaded automatically by l3build...]],
 }
