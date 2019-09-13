@@ -30,7 +30,7 @@
 %% version 2005/12/01 or later.
 %% 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{latexbug}[2017/12/15 v1.0d Bug-classification]
+\ProvidesPackage{latexbug}[2019/09/13 v1.0f Bug-classification]
 \def\latexbug@empty{}
 \def\latexbug@us{us}
 \def\latexbug@usstar{us*}
@@ -317,6 +317,7 @@ pctexps.def = us ,
 pctexwin.def = us ,
 pdftex.def = us ,
 pdftex.def = us ,
+rotating.sty = us ,
 tcidvi.def = us ,
 trig.sty = us ,
 truetex.def = us ,
@@ -352,12 +353,12 @@ cmmib57.sty = American Mathematical Society \Contact tech-support [at] ams [dot]
 eucal.sty = American Mathematical Society \Contact tech-support [at] ams [dot] org ,
 eufrak.sty = American Mathematical Society \Contact tech-support [at] ams [dot] org ,
 euscript.sty = American Mathematical Society \Contact tech-support [at] ams [dot] org ,
-ueuex.fd = us ,
-ueuf.fd = us ,
-ueur.fd = us ,
-ueus.fd = us ,
-umsa.fd = us ,
-umsb.fd = us ,
+ueuex.fd = ignore ,
+ueuf.fd = ignore ,
+ueur.fd = ignore ,
+ueus.fd = ignore ,
+umsa.fd = ignore ,
+umsb.fd = ignore ,
 8rbch.fd = us ,
 8rpag.fd = us ,
 8rpbk.fd = us ,
@@ -610,7 +611,9 @@ If you think the bug is in core LaTeX\MessageBreak
 (as maintained by the LaTeX Team) but\MessageBreak
 these files are needed to demonstrate\MessageBreak
 the problem, please continue and mention\MessageBreak
-this explicitly in your bug report}{Please correct your test file prior
+this explicitly in your bug report\MessageBreak
+(with an explanation why you think so)}{Please
+                     correct your test file prior
                      to submitting the bug report.\MessageBreak
                      Otherwise it is likely to be rejected!}%
   \fi
