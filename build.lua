@@ -15,7 +15,7 @@ packtdszip = true
 
 uploadconfig = {
  pkg = "latexbug",
- version = "v1.0e 2018-12-31",
+ version = "v1.0f 2019-09-13",
  author = "The LaTeX Team",
  license = "lppl1.3c",
  summary = "Bug-classification for LaTeX related bugs",
