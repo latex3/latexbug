@@ -20,8 +20,8 @@ LaTeX Font Info:    ... okay on input line ....
 (latexbug)                This test file uses third-party file(s)
 (latexbug)                
 (latexbug)                ==============
-(latexbug)                hyperref.sty  ->  Heiko Oberdiek 
-(latexbug)                    https://github.com/ho-tex/hyperref/issues
+(latexbug)                hyperref.sty  ->  LaTeX Team 
+(latexbug)                    https://github.com/latex3/hyperref/issues
 (latexbug)                ==============
 (latexbug)                
 (latexbug)                So you should contact the authors
