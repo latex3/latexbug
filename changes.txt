@@ -1,3 +1,7 @@
+2021-01-02  Frank Mittelbach  <Frank.Mittelbach@latex-project.org>
+
+	* latexbug.dtx: add l3debug.def
+
 2020-09-25  Joseph Wright  <Joseph.WRight@latex-project.org>
 
 	* latexbug.dtx: update l3backend file list
