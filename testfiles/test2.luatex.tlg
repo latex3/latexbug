@@ -54,7 +54,6 @@ Type  H <return>  for immediate help.
 l. ...\begin{document}
 Please correct your test file prior to submitting the bug report.
 Otherwise it is likely to be rejected!
-\AtBeginShipoutBox=\box...
 Package hyperref Info: Link coloring OFF on input line ....
 (../nameref.sty
 Package: nameref ....-..-.. v... Cross-referencing by name of section
