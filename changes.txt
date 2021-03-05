@@ -1,3 +1,8 @@
+2021-03-05  Frank Mittelbach  <Frank.Mittelbach@latex-project.org>
+
+	* latexbug.dtx
+	ignore hyperref-langpatches.def
+
 2021-01-02  Frank Mittelbach  <Frank.Mittelbach@latex-project.org>
 
 	* latexbug.dtx: add l3debug.def
@@ -13,5 +18,5 @@
 2018-12-31    <Frank.Mittelbach@latex-project.org>
 
 	* latexbug.dtx:
-	AMS classes are not supported by the LaTex team but by the AMS
+	AMS classes are not supported by the LaTeX team but by the AMS
 

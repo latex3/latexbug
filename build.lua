@@ -15,14 +15,15 @@ packtdszip = true
 
 uploadconfig = {
  pkg = "latexbug",
- version = "v1.0i 2021-01-02",
+ version = "v1.0j 2021-03-05",
  author = "The LaTeX Team",
  license = "lppl1.3c",
  summary = "Bug-classification for LaTeX related bugs",
  ctanPath = "/macros/latex/required/latexbug",
  repository = "https://github.com/latex3/latexbug",
+ uploader = "Frank Mittelbach",
+ email = "frank.mittelbach@latex-project.org",
  update = true ,
- note = [[Uploaded automatically by l3build... no announcement needed]],
 }
 
 
