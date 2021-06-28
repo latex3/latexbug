@@ -60,8 +60,7 @@ Package: nameref ....-..-.. v... Cross-referencing by name of section
 (../refcount.sty
 Package: refcount ....-..-.. v... Data extraction from label references (HO)
 )
-(../gettitlestring.s
-ty
+(../gettitlestring.sty
 Package: gettitlestring ....-..-.. v... Cleanup title references (HO)
 )
 \c@section@level=\count...
