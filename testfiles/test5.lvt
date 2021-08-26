@@ -4,7 +4,9 @@
 
 \documentclass{article}
 
-\usepackage{l3benchmark,xtemplate,hyperref,xcolor}
+\usepackage{xcolor}  % should not be shown
+
+\usepackage{fewerfloatpages,parskip,widows-and-orphans,dashundergaps}
 
 \START
 

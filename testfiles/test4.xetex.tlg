@@ -33,6 +33,8 @@ Package latexbug Warning: Special bug tracker!
 (latexbug)                    https://github.com/latex3/latex3/issues 
 (latexbug)                hyperref.sty  ->  Report at: 
 (latexbug)                    https://github.com/latex3/hyperref/issues 
+(latexbug)                xcolor.sty  ->  Report at: 
+(latexbug)                    https://github.com/latex3/xcolor/issues 
 (latexbug)                ==============
 (latexbug)                
 (latexbug)                Please note that these files have their own
