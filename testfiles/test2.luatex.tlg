@@ -40,7 +40,7 @@ Package latexbug Warning: Special bug tracker!
 (latexbug)                bug tracker and your issue should therefore
 (latexbug)                be reported in the indicated repository.
 (latexbug)                
-(latexbug)                If the are not necessary to exhibit the problem,
+(latexbug)                If they are not necessary to exhibit the problem,
 (latexbug)                remove them from your example and rerun it,
 (latexbug)                otherwise report the issue in the listed repository.
 (latexbug)                
