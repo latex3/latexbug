@@ -1,0 +1,15 @@
+\RequirePackage{latexbug}
+
+\input{regression-test}
+
+\documentclass{article}
+
+\usepackage{l3benchmark,xtemplate,hyperref}
+
+\START
+
+\begin{document}
+
+  \typeout{test}
+
+\END

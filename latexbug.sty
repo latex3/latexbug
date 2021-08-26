@@ -30,15 +30,15 @@
 %% version 2005/12/01 or later.
 %% 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{latexbug}[2021/06/28 v1.0k Bug-classification]
+\ProvidesPackage{latexbug}[2021/08/26 v1.0l Bug-classification]
 \def\latexbug@empty{}
 \def\latexbug@us{us}
 \def\latexbug@usstar{us*}
 \def\latexbug@ignore{ignore}
 \def\Contact{\MessageBreak \@spaces}
 \begingroup
-\long\def\latexbug@loop #1 = #2 , {% spaces matter
-  \global\@namedef{latexbug@@#1}{#2}%
+\long\def\latexbug@loop #1 = #2 #3, {% spaces matter
+  \global\@namedef{latexbug@@#1}{{#2}{#3}}%
   \ifx\latexbug@empty#1\else\expandafter\latexbug@loop\fi}
 \latexbug@loop
 latexbug.sty = us ,
@@ -536,7 +536,7 @@ hluatex.def  = ignore ,
 hpdftex.def  = ignore ,
 hxetex.def   = ignore ,
 hyperref.cfg = ignore ,
-hyperref.sty = LaTeX Team
+hyperref.sty = us*
                \Contact https://github.com/latex3/hyperref/issues ,
 hyperref-langpatches.def = ignore ,
 pd1enc.def   = ignore ,
@@ -558,7 +558,7 @@ siunitx.sty  = Joseph Wright
                \Contact https://github.com/josephwright/siunitx/issues ,
 basque.ldf      = Juan M. Aguirregabiria
                   \Contact <http://tp.lc.ehu.es/jma.html> ,
-belarusian.ldf  = Aleksey Novodvorsky, Andrew Shadura
+belarusian.ldf  = Aleksey Novodvorsky and Andrew Shadura
                   \Contact <andrew [at] shadura [dot] me> ,
 bosnian.ldf     = Samir Halilcevic %% Halilčević
                   \Contact <samir [dot] halilcevic [at] fet [dot] ba> ,
@@ -628,31 +628,35 @@ vietnamese.ldf  = Werner Lemberg
 \endgroup
 \let\latexbug@addtofilelist\@addtofilelist
 \def\latexbug@zzzz{}
-\def\latexbug@expl{}
+\def\latexbug@own{}
 \let\latexbug@process@table\process@table
 \def\process@table{\global\let\@addtofilelist\latexbug@addtofilelist
   \latexbug@process@table
   \ifx\latexbug@zzzz\latexbug@empty
-    \ifx\latexbug@expl\latexbug@empty
+    \ifx\latexbug@own\latexbug@empty
     \else
-      \PackageError{latexbug}%
-        {LaTeX3 file(s)\MessageBreak
+      \typeout{}%
+      \PackageWarningNoLine{latexbug}%
+        {Special bug tracker!\MessageBreak
 \MessageBreak
-This test files uses the LaTeX3 file(s)\MessageBreak
+This test file uses the following file(s)\MessageBreak
 \MessageBreak
         ==============\MessageBreak
-        \latexbug@expl
+        \latexbug@own
         ==============\MessageBreak
         \MessageBreak
-You should report bugs in these packages\MessageBreak
-at the LaTeX3 GitHub site,\MessageBreak
-https://github.com/latex3/latex3/issues\MessageBreak
-(Or remove them from your example,\MessageBreak
-if they are not necessary to\MessageBreak
-exhibit the problem).\MessageBreak
-}{Please correct your test file prior
-                     to submitting the bug report.\MessageBreak
-                     Otherwise it is likely to be rejected!}%
+Please note that these files have their own\MessageBreak
+bug tracker and your issue should therefore\MessageBreak
+be reported in the indicated repository.\MessageBreak
+        \MessageBreak
+If the are not necessary to exhibit the problem,\MessageBreak
+remove them from your example and rerun it,\MessageBreak
+otherwise report the  issue in the listed repository.\MessageBreak
+        \MessageBreak
+If different repositories are listed, try to\MessageBreak
+select the most appropriate one (but don't worry\MessageBreak
+too much, if the choice is not clear to you)}%
+      \typeout{}%
     \fi
   \else
       \PackageError{latexbug}%
@@ -689,14 +693,23 @@ this explicitly in your bug report\MessageBreak
     \ifx\csname latexbug@@\latexbug@x\endcsname\relax
       \def\latexbug@y{}%
     \else
-      \xdef\latexbug@y{\csname latexbug@@\latexbug@x\endcsname}%
+      \xdef\latexbug@y{\expandafter\expandafter\expandafter
+        \@firstoftwo\csname latexbug@@\latexbug@x\endcsname}%
+      \xdef\latexbug@z{\expandafter\expandafter\expandafter
+        \@secondoftwo\csname latexbug@@\latexbug@x\endcsname}%
     \fi
     \ifx\latexbug@y\latexbug@us\else
       \ifx\latexbug@y\latexbug@usstar
         \begingroup
           \let\MessageBreak\relax
-          \xdef\latexbug@expl{%
-            \latexbug@expl\latexbug@x
+          \xdef\latexbug@own{%
+            \latexbug@own\latexbug@x
+            \space\space -> \space Report at:
+        \ifx\latexbug@z\@empty
+           \Contact https://github.com/latex3/latex3/issues
+        \else
+          \latexbug@z
+        \fi
             \MessageBreak
           }%
         \endgroup
@@ -705,7 +718,9 @@ this explicitly in your bug report\MessageBreak
            {\let\MessageBreak\relax
              \xdef\latexbug@zzzz{\latexbug@zzzz\latexbug@x
                \ifx\latexbug@y\latexbug@empty\else
-                 \space\space -> \space \latexbug@y\fi
+                 \space\space -> \space \latexbug@y
+                                 \space \latexbug@z
+               \fi
                \MessageBreak}}%
         \fi
       \fi

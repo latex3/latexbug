@@ -105,8 +105,7 @@
 %
 % An error is generated if the test file makes use of third-party code
 % that is not maintained by the \LaTeX{} Project Team. For example, if
-% the file would load \texttt{geometry}, \texttt{footmisc} and
-% \texttt{hyperref} you
+% the file would load \texttt{geometry} and \texttt{footmisc} you
 % would see the following:
 % \begin{verbatim}
 % Package latexbug Error: Third-party file(s)
@@ -117,8 +116,6 @@
 % (latexbug)                geometry.sty  ->  Hideo Umeki 
 % (latexbug)                    <latexgeometry [at] gmail [dot] com>
 % (latexbug)                footmisc.sty
-% (latexbug)                hyperref.sty  ->  LaTeX Team
-% (latexbug)                    https://github.com/latex3/hyperref/issues
 % (latexbug)                ==============
 % (latexbug)                
 % \end{verbatim}
@@ -137,7 +134,7 @@
 % To make life somewhat easier \texttt{latexbug} will tell you the
 % name of the maintainer (if we know it and have added it in) and if
 % possible also the canonical bug address for the package (like in the
-% case of \texttt{geometry} and  \texttt{hyperref}).
+% case of \texttt{geometry}).
 % If we don't have that information, you
 % need to find it out for yourself by looking at the package
 % documentation.
@@ -155,6 +152,43 @@
 % \end{verbatim}
 % Please explain your reasoning why you think this is the case in
 % detail as part of the bug report.
+%
+% \vspace*{1ex}
+%
+% It is also possible that \texttt{latexbug} doesn't generate an
+% error, but issues a warning, that it has detected one or more
+% packages, that have their own bug tracker. In that case the report
+% should be made in the bug tracker of that package and not in the
+% \LaTeXe{}, even if it is a package that is mainted by us!
+%
+% Other people look these bug tracker to search for known problems and
+% thus it is best if yours is recorded in the right place.  Such a
+% warning will look like this (we use \texttt{hyperref} as an
+% example):
+% \begin{verbatim}
+% Package latexbug Warning: Special bug tracker!
+% (latexbug)                
+% (latexbug)                This test file uses the following file(s)
+% (latexbug)                
+% (latexbug)                ==============
+% (latexbug)                hyperref.sty  ->  Report at: 
+% (latexbug)                    https://github.com/latex3/hyperref/issues 
+% (latexbug)                ==============
+% (latexbug)                
+% (latexbug)                Please note that these files have their own
+% (latexbug)                bug tracker and your issue should therefore
+% (latexbug)                be reported in the indicated repository.
+% (latexbug)                
+% (latexbug)                If the are not necessary to exhibit the problem,
+% (latexbug)                remove them from your example and rerun it,
+% (latexbug)                otherwise report the issue in the listed repository.
+% (latexbug)                
+% (latexbug)                If different repositories are listed, try to
+% (latexbug)                select the most appropriate one (but don't worry
+% (latexbug)                too much, if the choice is not clear to you).
+% \end{verbatim}
+%
+%
 %
 % \vspace*{1ex}
 %
@@ -231,7 +265,7 @@
 %    \begin{macrocode}
 %<*package>
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{latexbug}[2021/06/28 v1.0k Bug-classification]
+\ProvidesPackage{latexbug}[2021/08/26 v1.0l Bug-classification]
 %    \end{macrocode}
 %
 % \begin{macro}{\latexbug@empty}
@@ -268,17 +302,26 @@
 %   mapping. The trailing space is important (stripping it is not really worth
 %   it for this very limited use case).
 %    \begin{macrocode}
-\long\def\latexbug@loop #1 = #2 , {% spaces matter
-  \global\@namedef{latexbug@@#1}{#2}%
+\long\def\latexbug@loop #1 = #2 #3, {% spaces matter
+  \global\@namedef{latexbug@@#1}{{#2}{#3}}%
   \ifx\latexbug@empty#1\else\expandafter\latexbug@loop\fi}
 %    \end{macrocode}
 % \end{macro}
 %
 % A simple database of files. The value \texttt{us} means we accept
-% bugs for it. We also take bug reports for \texttt{us*} (expl3) entries, but
+% bugs for it. We also take bug reports for \texttt{us*}
+% (expl3 or other repositories we suport) entries, but
 % they need to go to a different GitHub repository, so are handled separately
 % (and only show up
-% if there doesn't seem to be anything else to pick up). A value of
+% if there are no third-party packages).
+% For the \texttt{latex3/latex3} repository just write \texttt{us*}, for others
+% one need to specify the full details, e.g.,
+%\begin{verbatim}
+%  hyperref.sty = us* 
+%                 \Contact https://github.com/latex3/hyperref/issues ,
+%\end{verbatim}
+%
+% A value of
 % \texttt{ignore} means that its not our code, but we understand that it may
 % show up in legitimate test files and should therefore not trigger an error.
 %
@@ -290,7 +333,8 @@
 %
 % \begin{quote} \itshape
 %   The database format is somewhat fragile: one needs to have a space on both sides
-%   of the equal sign (or one gets a nasty low-level error) and names can't have
+%   of the equal sign  and before the comma (or one gets a nasty low-level error),
+%   and names can't have
 %   no-ascii characters in them, so they end up crippled (sorry for that).
 % \end{quote}
 %
@@ -806,7 +850,7 @@ hluatex.def  = ignore ,
 hpdftex.def  = ignore ,
 hxetex.def   = ignore ,               
 hyperref.cfg = ignore ,
-hyperref.sty = LaTeX Team
+hyperref.sty = us* 
                \Contact https://github.com/latex3/hyperref/issues ,
 hyperref-langpatches.def = ignore ,
 pd1enc.def   = ignore ,
@@ -832,7 +876,7 @@ siunitx.sty  = Joseph Wright
 %--------------------------------- babel external
 basque.ldf      = Juan M. Aguirregabiria
                   \Contact <http://tp.lc.ehu.es/jma.html> ,
-belarusian.ldf  = Aleksey Novodvorsky, Andrew Shadura
+belarusian.ldf  = Aleksey Novodvorsky and Andrew Shadura
                   \Contact <andrew [at] shadura [dot] me> ,
 bosnian.ldf     = Samir Halilcevic %% Halilčević
                   \Contact <samir [dot] halilcevic [at] fet [dot] ba> ,
@@ -915,11 +959,11 @@ vietnamese.ldf  = Werner Lemberg
 % \end{macro}
 %
 % \begin{macro}{\latexbug@zzzz}
-% \begin{macro}{\latexbug@expl}
+% \begin{macro}{\latexbug@own}
 %   Storage for third-party files and those from the \LaTeX3 set on GitHub.
 %    \begin{macrocode}
 \def\latexbug@zzzz{}
-\def\latexbug@expl{}
+\def\latexbug@own{}
 %    \end{macrocode}
 % \end{macro}
 % \end{macro}
@@ -928,33 +972,37 @@ vietnamese.ldf  = Werner Lemberg
 % \begin{macro}{\process@table}
 %   A hook into a convenient place in the document set up: the
 %   initialization of NFSS during the \cs{document} macro. If either
-%   \cs{latexbug@zzzz} or \cs{latexbug@expl} have any content then there is
+%   \cs{latexbug@zzzz} or \cs{latexbug@own} have any content then there is
 %   a message to issue, it's just a question of deciding which one.
 %    \begin{macrocode}
 \let\latexbug@process@table\process@table
 \def\process@table{\global\let\@addtofilelist\latexbug@addtofilelist
   \latexbug@process@table
   \ifx\latexbug@zzzz\latexbug@empty
-    \ifx\latexbug@expl\latexbug@empty
+    \ifx\latexbug@own\latexbug@empty
     \else
-      \PackageError{latexbug}%
-        {LaTeX3 file(s)\MessageBreak
+      \typeout{}%
+      \PackageWarningNoLine{latexbug}%
+        {Special bug tracker!\MessageBreak
 \MessageBreak
-This test files uses the LaTeX3 file(s)\MessageBreak
+This test file uses the following file(s)\MessageBreak
 \MessageBreak
         ==============\MessageBreak
-        \latexbug@expl
+        \latexbug@own
         ==============\MessageBreak
         \MessageBreak
-You should report bugs in these packages\MessageBreak
-at the LaTeX3 GitHub site,\MessageBreak
-https://github.com/latex3/latex3/issues\MessageBreak
-(Or remove them from your example,\MessageBreak
-if they are not necessary to\MessageBreak
-exhibit the problem).\MessageBreak
-}{Please correct your test file prior
-                     to submitting the bug report.\MessageBreak
-                     Otherwise it is likely to be rejected!}%
+Please note that these files have their own\MessageBreak
+bug tracker and your issue should therefore\MessageBreak
+be reported in the indicated repository.\MessageBreak
+        \MessageBreak
+If the are not necessary to exhibit the problem,\MessageBreak
+remove them from your example and rerun it,\MessageBreak
+otherwise report the  issue in the listed repository.\MessageBreak
+        \MessageBreak
+If different repositories are listed, try to\MessageBreak
+select the most appropriate one (but don't worry\MessageBreak
+too much, if the choice is not clear to you)}%
+      \typeout{}%
     \fi
   \else
       \PackageError{latexbug}%
@@ -998,7 +1046,6 @@ this explicitly in your bug report\MessageBreak
 %   later.
 %    \begin{macrocode}
 \def\@addtofilelist#1{%
-% \show\@currnamestack
   \expandafter\latexbug@iftoplevel\@currnamestack {}\@nil
   \begingroup
     \xdef\latexbug@x{#1}% TODO: one-level sanitize
@@ -1006,14 +1053,30 @@ this explicitly in your bug report\MessageBreak
     \ifx\csname latexbug@@\latexbug@x\endcsname\relax
       \def\latexbug@y{}%
     \else
-      \xdef\latexbug@y{\csname latexbug@@\latexbug@x\endcsname}%
+%    \end{macrocode}
+%    \cs{latexbug@y} will contain either on of the keywords
+%    \texttt{us} or \texttt{us*} or \texttt{ignore} or it will contain
+%    the start part of the third-party information, \cs{latexbug@z}
+%    contains the rest (if anything), the space between the two is
+%    lost and needs to be reinserted.
+%    \begin{macrocode}
+      \xdef\latexbug@y{\expandafter\expandafter\expandafter
+        \@firstoftwo\csname latexbug@@\latexbug@x\endcsname}%
+      \xdef\latexbug@z{\expandafter\expandafter\expandafter
+        \@secondoftwo\csname latexbug@@\latexbug@x\endcsname}%
     \fi
     \ifx\latexbug@y\latexbug@us\else
       \ifx\latexbug@y\latexbug@usstar
         \begingroup
           \let\MessageBreak\relax
-          \xdef\latexbug@expl{%
-            \latexbug@expl\latexbug@x
+          \xdef\latexbug@own{%
+            \latexbug@own\latexbug@x
+            \space\space -> \space Report at:
+        \ifx\latexbug@z\@empty
+           \Contact https://github.com/latex3/latex3/issues
+        \else
+          \latexbug@z
+        \fi
             \MessageBreak
           }%
         \endgroup
@@ -1022,7 +1085,9 @@ this explicitly in your bug report\MessageBreak
            {\let\MessageBreak\relax
              \xdef\latexbug@zzzz{\latexbug@zzzz\latexbug@x
                \ifx\latexbug@y\latexbug@empty\else
-                 \space\space -> \space \latexbug@y\fi
+                 \space\space -> \space \latexbug@y
+                                 \space \latexbug@z
+               \fi
                \MessageBreak}}%
         \fi
       \fi

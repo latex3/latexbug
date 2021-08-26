@@ -33,33 +33,26 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line ....
 LaTeX Font Info:    ... okay on input line ....
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line ....
 LaTeX Font Info:    ... okay on input line ....
-! Package latexbug Error: Third-party file(s)
+Package latexbug Warning: Special bug tracker!
 (latexbug)                
-(latexbug)                This test file uses third-party file(s)
+(latexbug)                This test file uses the following file(s)
 (latexbug)                
 (latexbug)                ==============
-(latexbug)                hyperref.sty  ->  LaTeX Team 
-(latexbug)                    https://github.com/latex3/hyperref/issues
+(latexbug)                hyperref.sty  ->  Report at: 
+(latexbug)                    https://github.com/latex3/hyperref/issues 
 (latexbug)                ==============
 (latexbug)                
-(latexbug)                So you should contact the authors
-(latexbug)                of these files, not the LaTeX Team!
-(latexbug)                (Or remove the packages that load
-(latexbug)                them, if they are not necessary to
-(latexbug)                exhibit the problem).
+(latexbug)                Please note that these files have their own
+(latexbug)                bug tracker and your issue should therefore
+(latexbug)                be reported in the indicated repository.
 (latexbug)                
-(latexbug)                If you think the bug is in core LaTeX
-(latexbug)                (as maintained by the LaTeX Team) but
-(latexbug)                these files are needed to demonstrate
-(latexbug)                the problem, please continue and mention
-(latexbug)                this explicitly in your bug report
-(latexbug)                (with an explanation why you think so).
-See the latexbug package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-l. ...\begin{document}
-Please correct your test file prior to submitting the bug report.
-Otherwise it is likely to be rejected!
+(latexbug)                If the are not necessary to exhibit the problem,
+(latexbug)                remove them from your example and rerun it,
+(latexbug)                otherwise report the issue in the listed repository.
+(latexbug)                
+(latexbug)                If different repositories are listed, try to
+(latexbug)                select the most appropriate one (but don't worry
+(latexbug)                too much, if the choice is not clear to you).
 Package hyperref Info: Link coloring OFF on input line ....
 (../nameref.sty
 Package: nameref ....-..-.. v... Cross-referencing by name of section
