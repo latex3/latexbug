@@ -1,3 +1,7 @@
+2021-09-25  Frank Mittelbach  <Frank.Mittelbach@latex-project.org>
+
+	* latexbug.dtx: don't warn for expl3.ltx (part of rollback) 
+
 2021-08-26  Frank Mittelbach  <Frank.Mittelbach@latex-project.org>
 
 	* latexbug.dtx:
