@@ -49,19 +49,6 @@ Package latexbug Warning: Special bug tracker!
 (latexbug)                select the most appropriate one (but don't worry
 (latexbug)                too much, if the choice is not clear to you).
 Package hyperref Info: Link coloring OFF on input line ....
-(../nameref.sty
-Package: nameref ....-..-.. v... Cross-referencing by name of section
-(../refcount.sty
-Package: refcount ....-..-.. v... Data extraction from label references (HO)
-)
-(../gettitlestring.sty
-Package: gettitlestring ....-..-.. v... Cleanup title references (HO)
-)
-\c@section@level=\count...
-)
-LaTeX Info: Redefining \ref on input line ....
-LaTeX Info: Redefining \pageref on input line ....
-LaTeX Info: Redefining \nameref on input line ....
 (test4.out) (test4.out)
 \@outlinefile=\write...
 Package hyperref Warning: Rerun to get /PageLabels entry.

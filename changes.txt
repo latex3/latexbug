@@ -1,6 +1,16 @@
+2022-06-10  Frank Mittelbach  <Frank.Mittelbach@latex-project.org>
+
+	* latexbug.dtx:
+	Don't warn for hypdoc, used by doc V2 (gh/5)
+
+	Added ltdoc.cfg
+
+	Added all kinds of babel locale files so that they do not show
+	up as external (might be a never ending story)
+
 2021-09-25  Frank Mittelbach  <Frank.Mittelbach@latex-project.org>
 
-	* latexbug.dtx: don't warn for expl3.ltx (part of rollback) 
+	* latexbug.dtx: don't warn for expl3.ltx (part of rollback)
 
 2021-08-26  Frank Mittelbach  <Frank.Mittelbach@latex-project.org>
 
