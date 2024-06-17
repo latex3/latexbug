@@ -1,0 +1,15 @@
+\RequirePackage{latexbug}
+
+\input{regression-test}
+
+\documentclass{article}
+
+\usepackage{fontspec,unicode-math}  % doesn't work with pdftex
+
+\START
+
+\begin{document}
+
+  \typeout{test}
+
+\END

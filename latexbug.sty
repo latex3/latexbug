@@ -30,7 +30,7 @@
 %% version 2005/12/01 or later.
 %% 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{latexbug}[2022/06/10 v1.0m Bug-classification]
+\ProvidesPackage{latexbug}[2024/06/17 v1.0o Bug-classification]
 \def\latexbug@empty{}
 \def\latexbug@us{us}
 \def\latexbug@usstar{us*}
@@ -43,6 +43,7 @@
 \latexbug@loop
 latexbug.sty = us ,
 regression-test = us ,
+regression-test.tex = us ,
 alltt.sty = us ,
 ansinew.def = us ,
 applemac.def = us ,
@@ -112,6 +113,7 @@ ltluatex.tex = us ,
 ltnews.cls = us ,
 ltxcheck.tex = us ,
 ltxdoc.cls = us ,
+ltxdoc.cfg = us ,
 ltxguide.cls = us ,
 ly1enc.dfu = us ,
 macce.def = us ,
@@ -1084,6 +1086,7 @@ graphicx.sty = us ,
 keyval.sty = us ,
 lscape.sty = us ,
 luatex.def = us ,
+mathcolor.ltx = us ,
 pctex32.def = us ,
 pctexhp.def = us ,
 pctexps.def = us ,
@@ -1279,13 +1282,42 @@ l3str-enc-iso88597.def = us* ,
 l3str-enc-iso88598.def = us* ,
 l3str-enc-iso88599.def = us* ,
 xcoffins.sty = us* ,
-xfrac.sty = us* ,
 xgalley.sty = us* ,
 xparse.sty = us* ,
 xtemplate.sty = us* ,
 pdfmanagement-testphase.sty = us*
-               \Contact https://github.com/latex3/pdfresources/issues
+               \Contact https://github.com/latex3/pdfresources/issues ,
+tagpdf.sty = us*
+               \Contact https://github.com/latex3/tagpdf/issues ,
+documentmetadata-support.ltx = LaTeX tagging project
+               \Contact https://github.com/latex3/tagging-project/issues ,
+l3backend-testphase-pdftex.def = ignore ,
+latex-lab-amsmath.ltx = ignore ,
+latex-lab-footnotes.ltx = ignore ,
+latex-lab-math.ltx = ignore ,
+latex-lab-mathpkg.ltx = ignore ,
+latex-lab-mathtools.ltx = ignore ,
+latex-lab-testphase-bib.sty = ignore ,
+latex-lab-testphase-block.sty = ignore ,
+latex-lab-testphase-float.sty = ignore ,
+latex-lab-testphase-graphic.sty = ignore ,
+latex-lab-testphase-marginpar.sty = ignore ,
+latex-lab-testphase-math.sty = ignore ,
+latex-lab-testphase-minipage.sty = ignore ,
+latex-lab-testphase-new-or-1.sty = ignore ,
+latex-lab-testphase-new-or-2.sty = ignore ,
+latex-lab-testphase-sec.sty = ignore ,
+latex-lab-testphase-table.sty = ignore ,
+latex-lab-testphase-text.sty = ignore ,
+latex-lab-testphase-title.sty = ignore ,
+latex-lab-testphase-toc.sty = ignore ,
+math-latex-lab-testphase.ltx = ignore ,
+pdfmanagement-firstaid.sty = ignore ,
 pdfmanagement-testphase.ltx = ignore ,
+phase-II-latex-lab-testphase.ltx = ignore ,
+phase-III-latex-lab-testphase.ltx = ignore ,
+table-latex-lab-testphase.ltx = ignore ,
+title-latex-lab-testphase.ltx = ignore ,
 hluatex.def  = ignore ,
 hpdftex.def  = ignore ,
 hxetex.def   = ignore ,
@@ -1302,18 +1334,28 @@ beamer.cls   = Joseph Wright
                \Contact https://github.com/josephwright/beamer/issues ,
 dashundergaps.sty = Frank Mittelbach
               \Contact https://github.com/FrankMittelbach/fmitex-dashundergaps/issues ,
+parnotes.sty = Frank Mittelbach
+              \Contact https://github.com/FrankMittelbach/fmitex-parnotes ,
 fewerfloatpages.sty = Frank Mittelbach
               \Contact https://github.com/FrankMittelbach/fmitex-fewerfloatpages ,
-fontspec.sty = Will Robertson
-               \Contact https://github.com/wspr/fontspec/issues ,
+fontspec.sty = us*
+               \Contact https://github.com/latex3/fontspec/issues ,
+footmisc.sty = Frank Mittelbach
+              \Contact https://github.com/FrankMittelbach/fmitex-footmisc ,
 luatex85.sty   = Joseph Wright
                \Contact https://github.com/josephwright/luatex85/issues ,
 parskip.sty = Frank Mittelbach
                \Contact https://github.com/FrankMittelbach/fmitex-parskip/issues ,
 siunitx.sty  = Joseph Wright
                \Contact https://github.com/josephwright/siunitx/issues ,
+unicodefonttable.sty = Frank Mittelbach
+              \Contact https://github.com/FrankMittelbach/fmitex-unicodefonttable ,
+unicode-math.sty = us*
+               \Contact https://github.com/latex3/unicode-math/issues ,
 widows-and-orphans.sty = Frank Mittelbach
                \Contact https://github.com/FrankMittelbach/fmitex-widows-and-orphans/issues ,
+xfrac.sty = us*
+               \Contact https://github.com/latex3/xfrac/issues ,
 blindtext.sty = ignore ,
 etoolbox.sty = ignore ,
 kantlipsum.sty   = ignore ,

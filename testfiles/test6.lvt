@@ -1,0 +1,24 @@
+\RequirePackage{latexbug}
+
+\DocumentMetadata{testphase={phase-III,title,math,table}, lang=en}
+
+\input{regression-test}
+
+\documentclass{article}
+
+\title{Test}
+\author{Frank}
+
+\START
+
+\begin{document}
+
+  \maketitle
+
+  \typeout{test accessibility}
+
+  $x$
+
+  \begin{tabular}{cc} x & y \\ a & b \end{tabular}
+
+\end{document}

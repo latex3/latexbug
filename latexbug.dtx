@@ -2,7 +2,7 @@
 %
 % Package latexbug for use with LaTeX2e
 %
-% Copyright 2016-2022
+% Copyright 2016-2024
 %
 % The LaTeX3 Project and any individual authors listed elsewhere
 % in this file. 
@@ -267,7 +267,7 @@
 %    \begin{macrocode}
 %<*package>
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{latexbug}[2022/06/14 v1.0n Bug-classification]
+\ProvidesPackage{latexbug}[2024/06/17 v1.0o Bug-classification]
 %    \end{macrocode}
 %
 % \begin{macro}{\latexbug@empty}
@@ -345,6 +345,7 @@
 %--------------------------------- 
 latexbug.sty = us ,
 regression-test = us ,
+regression-test.tex = us ,
 %--------------------------------- base
 alltt.sty = us ,
 ansinew.def = us ,
@@ -1598,14 +1599,46 @@ l3str-enc-iso88597.def = us* ,
 l3str-enc-iso88598.def = us* ,
 l3str-enc-iso88599.def = us* ,
 xcoffins.sty = us* ,
-xfrac.sty = us* ,
 xgalley.sty = us* ,
 xparse.sty = us* ,
 xtemplate.sty = us* ,
 %---------------------------------  TAGGING PROJECT
 pdfmanagement-testphase.sty = us*
-               \Contact https://github.com/latex3/pdfresources/issues
+               \Contact https://github.com/latex3/tagging-project/issues ,
+tagpdf.sty = us*
+               \Contact https://github.com/latex3/tagging-project/issues ,
+documentmetadata-support.ltx = us*
+               \Contact https://github.com/latex3/tagging-project/issues ,
+l3backend-testphase-luatex.def = ignore ,
+l3backend-testphase-pdftex.def = ignore ,
+l3backend-testphase-xetex.def = ignore ,
+latex-lab-amsmath.ltx = ignore ,
+latex-lab-footnotes.ltx = ignore ,
+latex-lab-math.ltx = ignore ,
+latex-lab-mathpkg.ltx = ignore ,
+latex-lab-mathtools.ltx = ignore ,
+latex-lab-testphase-bib.sty = ignore ,
+latex-lab-testphase-block.sty = ignore ,
+latex-lab-testphase-float.sty = ignore ,
+latex-lab-testphase-graphic.sty = ignore ,
+latex-lab-testphase-marginpar.sty = ignore ,
+latex-lab-testphase-math.sty = ignore ,
+latex-lab-testphase-minipage.sty = ignore ,
+latex-lab-testphase-new-or-1.sty = ignore ,
+latex-lab-testphase-new-or-2.sty = ignore ,
+latex-lab-testphase-sec.sty = ignore ,
+latex-lab-testphase-table.sty = ignore ,
+latex-lab-testphase-text.sty = ignore ,
+latex-lab-testphase-title.sty = ignore ,
+latex-lab-testphase-toc.sty = ignore ,
+math-latex-lab-testphase.ltx = ignore ,
+pdfmanagement-firstaid.sty = ignore ,
 pdfmanagement-testphase.ltx = ignore ,
+phase-II-latex-lab-testphase.ltx = ignore ,
+phase-III-latex-lab-testphase.ltx = ignore ,
+table-latex-lab-testphase.ltx = ignore ,
+tagpdf-luatex.def = ignore ,
+title-latex-lab-testphase.ltx = ignore ,
 %---------------------------------  EXTERNAL PACKAGES SUPPORTED BY THE LaTeX Team
 hluatex.def  = ignore ,               
 hpdftex.def  = ignore ,
@@ -1619,23 +1652,33 @@ pd1enc.def   = ignore ,
 puenc.def    = ignore ,
 xcolor.sty = us* 
       \Contact https://github.com/latex3/xcolor/issues ,
-%---------------------------------  PACKAGES BY MEMBERS OF THE LaTeX Team
+%---------------------------------  PACKAGES BY MEMBERS OF THE LaTeX Team with their own repos
 beamer.cls   = Joseph Wright
                \Contact https://github.com/josephwright/beamer/issues ,
 dashundergaps.sty = Frank Mittelbach 
               \Contact https://github.com/FrankMittelbach/fmitex-dashundergaps/issues ,
+parnotes.sty = Frank Mittelbach 
+              \Contact https://github.com/FrankMittelbach/fmitex-parnotes ,
 fewerfloatpages.sty = Frank Mittelbach 
               \Contact https://github.com/FrankMittelbach/fmitex-fewerfloatpages ,
-fontspec.sty = Will Robertson
-               \Contact https://github.com/wspr/fontspec/issues ,
+fontspec.sty = us*
+               \Contact https://github.com/latex3/fontspec/issues ,
+footmisc.sty = Frank Mittelbach 
+              \Contact https://github.com/FrankMittelbach/fmitex-footmisc ,
 luatex85.sty   = Joseph Wright
                \Contact https://github.com/josephwright/luatex85/issues ,
 parskip.sty = Frank Mittelbach
                \Contact https://github.com/FrankMittelbach/fmitex-parskip/issues ,
 siunitx.sty  = Joseph Wright
                \Contact https://github.com/josephwright/siunitx/issues ,
+unicodefonttable.sty = Frank Mittelbach 
+              \Contact https://github.com/FrankMittelbach/fmitex-unicodefonttable ,
+unicode-math.sty = us*
+               \Contact https://github.com/latex3/unicode-math/issues ,
 widows-and-orphans.sty = Frank Mittelbach 
                \Contact https://github.com/FrankMittelbach/fmitex-widows-and-orphans/issues ,
+xfrac.sty = us*
+               \Contact https://github.com/latex3/xfrac/issues ,
 %---------------------------------  USEFUL FOR BUG REPORTS
 blindtext.sty = ignore ,
 etoolbox.sty = ignore ,
