@@ -103,6 +103,7 @@ Package latexbug Warning: Special bug tracker!
 (latexbug)                select the most appropriate one (but don't worry
 (latexbug)                too much, if the choice is not clear to you).
 Info: mathml file test6-mathml does not exist
+Info: mathml file test6-luamml-mathml does not exist
 test accessibility
 ====>first-result=macro:->x
 ====>first-tmpmathcontent=macro:->
