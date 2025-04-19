@@ -1,3 +1,11 @@
+2025-04-20  Yukai Chou  <muzimuzhi@gmail.com>
+
+	* latexbug.dtx:
+	Add missing l3experimental files;
+	Re-classify and mark old l3experimental files;
+	Re-classify l3packages files;
+	Add l3sys-query.sty
+
 2024-07-16  Yukai Chou  <muzimuzhi@gmail.com>
 
 	* latexbug.dtx:

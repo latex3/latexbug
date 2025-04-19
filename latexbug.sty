@@ -30,7 +30,7 @@
 %% version 2005/12/01 or later.
 %% 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{latexbug}[2024/07/16 v1.0p Bug-classification]
+\ProvidesPackage{latexbug}[2025/04/20 v1.0q Bug-classification]
 \def\latexbug@empty{}
 \def\latexbug@us{us}
 \def\latexbug@usstar{us*}
@@ -230,6 +230,7 @@ ftnright.sty = us ,
 h.tex = us ,
 hhline.sty = us ,
 indentfirst.sty = us ,
+l3sys-query.sty = us* ,
 layout.sty = us ,
 longtable-2020-01-07.sty = us ,
 longtable.sty = us ,
@@ -1245,16 +1246,25 @@ ufplmbb.fd = us ,
 upsy.fd = us ,
 upzd.fd = us ,
 utopia.sty = us ,
-l3benchmark.sty = us* ,
-l3bitset.sty = us* ,
+l3benchmark.sty = us* ,                % -- old
+l3bitset.sty = us* ,                   % -- old
 l3draw.sty = us* ,
-l3graphics.sty = us* ,
-l3sys-shell.sty = us* ,
+l3galley.sty = us* ,
+l3graphics.sty = us* ,                 % -- old
+l3opacity.sty = us* ,                  % -- old
+l3str-format.sty = us* ,
+l3sys-shell.sty = us* ,                % -- old
+xcoffins.sty = us* ,
+xgalley.sty = us* ,
+l3keys2e.sty = us* ,
+xfp.sty = us* ,
 xparse-2018-04-12.sty = us* ,
 xparse-2020-10-01.sty = us* ,
 xparse-generic.tex = us* ,
 xparse.ltx = us* ,
-xfp.sty = us* ,
+xparse.sty = us* ,
+xtemplate-2023-10-10.sty = us* ,
+xtemplate.sty = us* ,
 expl3-code.tex = ignore ,
 expl3.ltx  = ignore ,
 expl3.lua = us* ,
@@ -1271,7 +1281,6 @@ l3debug.def = us* ,
 l3deprecation.def = ignore ,
 l3doc.cls = us* ,
 l3docstrip.tex = us ,
-l3keys2e.sty = us* ,
 l3str-enc-iso88591.def = us* ,
 l3str-enc-iso885910.def = us* ,
 l3str-enc-iso885911.def = us* ,
@@ -1287,11 +1296,6 @@ l3str-enc-iso88596.def = us* ,
 l3str-enc-iso88597.def = us* ,
 l3str-enc-iso88598.def = us* ,
 l3str-enc-iso88599.def = us* ,
-xcoffins.sty = us* ,
-xgalley.sty = us* ,
-xparse.sty = us* ,
-xtemplate-2023-10-10.sty = us* ,
-xtemplate.sty = us* ,
 pdfmanagement-testphase.sty = us*
                \Contact https://github.com/latex3/tagging-project/issues ,
 tagpdf.sty = us*
