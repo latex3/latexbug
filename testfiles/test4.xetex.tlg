@@ -1,6 +1,11 @@
 This is a generated file for the l3build validation system.
 Don't change this file in any respect.
-(test4.aux)
+(../l3backend-xetex.def
+File: l3backend-xetex.def ....-..-.. L3 backend support: XeTeX
+\g__graphics_track_int=\count...
+\g__pdfannot_backend_int=\count...
+\g__pdfannot_backend_link_int=\count...
+) (test4.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line ....
 LaTeX Font Info:    ... okay on input line ....
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line ....
@@ -26,8 +31,6 @@ Package latexbug Warning: Special bug tracker!
 (latexbug)                This test file uses the following file(s)
 (latexbug)                
 (latexbug)                ==============
-(latexbug)                l3benchmark.sty  ->  Report at: 
-(latexbug)                    https://github.com/latex3/latex3/issues 
 (latexbug)                xtemplate.sty  ->  Report at: 
 (latexbug)                    https://github.com/latex3/latex3/issues 
 (latexbug)                hyperref.sty  ->  Report at: 

@@ -1,6 +1,9 @@
 This is a generated file for the l3build validation system.
 Don't change this file in any respect.
-(test4.aux)
+(../l3backend-pdftex.def
+File: l3backend-pdftex.def ....-..-.. L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count...
+) (test4.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line ....
 LaTeX Font Info:    ... okay on input line ....
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line ....
@@ -24,8 +27,6 @@ Package latexbug Warning: Special bug tracker!
 (latexbug)                This test file uses the following file(s)
 (latexbug)                
 (latexbug)                ==============
-(latexbug)                l3benchmark.sty  ->  Report at: 
-(latexbug)                    https://github.com/latex3/latex3/issues 
 (latexbug)                xtemplate.sty  ->  Report at: 
 (latexbug)                    https://github.com/latex3/latex3/issues 
 (latexbug)                hyperref.sty  ->  Report at: 
