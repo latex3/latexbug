@@ -63,6 +63,9 @@ LaTeX Info: Redefining \Relbar on input line ....
 \mathdisplay@stack=\toks...
 LaTeX Info: Redefining \[ on input line ....
 LaTeX Info: Redefining \] on input line ....
+) (../latex-lab-amsmath.ltx
+File: latex-lab-amsmath.ltx ....-..-.. v... amsmath adaptions
+LaTeX Info: Redefining \eqref on input line ....
 ) (test6.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line ....
 LaTeX Font Info:    ... okay on input line ....
@@ -89,6 +92,8 @@ Package latexbug Warning: Special bug tracker!
 (latexbug)                    https://github.com/latex3/tagging-project/issues 
 (latexbug)                pdfmanagement-testphase.sty  ->  Report at: 
 (latexbug)                    https://github.com/latex3/tagging-project/issues 
+(latexbug)                pdfmanagement.ltx  ->  Report at: 
+(latexbug)                    https://github.com/latex3/tagging-project/issues 
 (latexbug)                tagpdf.sty  ->  Report at: 
 (latexbug)                    https://github.com/latex3/tagging-project/issues 
 (latexbug)                ==============
@@ -107,11 +112,9 @@ Package latexbug Warning: Special bug tracker!
 Info: mathml file test6-mathml does not exist
 Info: mathml file test6-luamml-mathml does not exist
 test accessibility
-====>first-result=macro:->x
-====>first-tmpmathcontent=macro:->
-====>formula has no subparts
+====>grabbed math=macro:->x
 Package tagpdf Info: Finalizing the tagging structure:
-(tagpdf)             Writing out ~21 structure objects
+(tagpdf)             Writing out ~22 structure objects
 (tagpdf)             with ~14 'MC' leaf nodes.
 (tagpdf)             Be patient if there are lots of objects!
 Package tagpdf Info: writing ParentTree
