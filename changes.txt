@@ -1,3 +1,13 @@
+2026-03-16  Yukai Chou  <muzimuzhi@gmail.com>
+
+	* latexbug.dtx:
+	Add tagpdf-debug.sty
+
+2026-02-12  Ulrike Fischer  <Ulrike.Fischer@latex-project.org>
+
+	* latexbug.dtx:
+	Add missing latex-lab-unicode-math.ltx and luamml.sty
+
 2026-01-20  Ulrike Fischer  <Ulrike.Fischer@latex-project.org>
 
 	* latexbug.dtx:
@@ -74,4 +84,3 @@
 
 	* latexbug.dtx:
 	AMS classes are not supported by the LaTeX team but by the AMS
-
