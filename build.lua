@@ -15,7 +15,7 @@ packtdszip = true
 
 uploadconfig = {
  pkg = "latexbug",
- version = "v1.0q 2025/04/20",
+ version = "v1.0s 2026/03/16",
  author = "The LaTeX Team",
  license = "lppl1.3c",
  summary = "Bug-classification for LaTeX related bugs",
@@ -35,4 +35,3 @@ if not release_date then
    kpse.set_program_name("kpsewhich")
    dofile(kpse.lookup("l3build.lua"))
 end
-

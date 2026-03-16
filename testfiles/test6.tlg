@@ -92,8 +92,6 @@ Package latexbug Warning: Special bug tracker!
 (latexbug)                    https://github.com/latex3/tagging-project/issues 
 (latexbug)                pdfmanagement.ltx  ->  Report at: 
 (latexbug)                    https://github.com/latex3/tagging-project/issues 
-(latexbug)                tagpdf.sty  ->  Report at: 
-(latexbug)                    https://github.com/latex3/tagging-project/issues 
 (latexbug)                ==============
 (latexbug)                
 (latexbug)                Please note that these files have their own
@@ -110,7 +108,6 @@ Package latexbug Warning: Special bug tracker!
 Info: mathml file test6-mathml does not exist
 Info: mathml file test6-luamml-mathml does not exist
 test accessibility
-====>grabbed math=macro:->x
 [1
 ]<<latex-list-css.html>><<latex-align-css.html>> (test6.aux)
 Package tagpdf Info: Finalizing the tagging structure:
