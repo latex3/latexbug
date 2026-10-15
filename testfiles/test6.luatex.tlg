@@ -66,11 +66,12 @@ LaTeX Info: Redefining \] on input line ....
 ) (../latex-lab-amsmath.ltx
 File: latex-lab-amsmath.ltx ....-..-.. v... amsmath adaptions
 LaTeX Info: Redefining \eqref on input line ....
+\l__luamml_struct_tmpa_int=\count...
 )
-Package tagpdf Warning: The package unicode-math is missing
-(tagpdf)                luamml will not create an MathML file.
+Package tagpdf Warning: Neither unicode-math nor lua-unicode-math has been loaded.
+(tagpdf)                luamml will not create a MathML file.
 (tagpdf)                To avoid this warning load unicode-math 
-(tagpdf)                or disable luamml with 
+(tagpdf)                or lua-unicode-math or disable luamml with 
 (tagpdf)                \tagpdfsetup {math/mathml/luamml/load=false}
 (tagpdf)                or force luamml with 
 (tagpdf)                \tagpdfsetup {math/mathml/luamml/load=true}
@@ -97,8 +98,6 @@ Package latexbug Warning: Special bug tracker!
 (latexbug)                
 (latexbug)                ==============
 (latexbug)                documentmetadata-support.ltx  ->  Report at: 
-(latexbug)                    https://github.com/latex3/tagging-project/issues 
-(latexbug)                pdfmanagement-testphase.sty  ->  Report at: 
 (latexbug)                    https://github.com/latex3/tagging-project/issues 
 (latexbug)                pdfmanagement.ltx  ->  Report at: 
 (latexbug)                    https://github.com/latex3/tagging-project/issues 

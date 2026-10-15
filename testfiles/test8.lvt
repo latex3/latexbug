@@ -1,0 +1,15 @@
+\RequirePackage{latexbug}
+
+\input{regression-test}
+
+\documentclass{article}
+
+\usepackage{bookmark}
+
+\START
+
+\begin{document}
+
+  \typeout{test}
+
+\END

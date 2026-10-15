@@ -66,6 +66,7 @@ LaTeX Info: Redefining \] on input line ....
 ) (../latex-lab-amsmath.ltx
 File: latex-lab-amsmath.ltx ....-..-.. v... amsmath adaptions
 LaTeX Info: Redefining \eqref on input line ....
+\l__luamml_struct_tmpa_int=\count...
 ) (test6.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line ....
 LaTeX Font Info:    ... okay on input line ....
@@ -87,8 +88,6 @@ Package latexbug Warning: Special bug tracker!
 (latexbug)                
 (latexbug)                ==============
 (latexbug)                documentmetadata-support.ltx  ->  Report at: 
-(latexbug)                    https://github.com/latex3/tagging-project/issues 
-(latexbug)                pdfmanagement-testphase.sty  ->  Report at: 
 (latexbug)                    https://github.com/latex3/tagging-project/issues 
 (latexbug)                pdfmanagement.ltx  ->  Report at: 
 (latexbug)                    https://github.com/latex3/tagging-project/issues 

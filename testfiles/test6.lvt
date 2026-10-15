@@ -1,6 +1,6 @@
 \RequirePackage{latexbug}
 
-\DocumentMetadata{testphase={phase-III,title,math,table}, lang=en}
+\DocumentMetadata{tagging=on, lang=en}
 
 \input{regression-test}
 
